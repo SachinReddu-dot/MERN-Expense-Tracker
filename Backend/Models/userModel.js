@@ -14,6 +14,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    ProfilepicImg: String
 },{timestamps: true})
 
 module.exports = mongoose.model('user', userSchema);

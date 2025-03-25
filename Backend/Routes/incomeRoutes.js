@@ -9,6 +9,6 @@ router.get('/get', protect, getAllIncome);
 
 router.post('/download-income', protect, DownloadIncome);
 
-router.delete('/delete', protect, DeleteIncome);
+router.delete('/delete/:id', protect, DeleteIncome);
 
 module.exports = router;

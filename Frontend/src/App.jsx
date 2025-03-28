@@ -1,20 +1,19 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
 import { Routes, Route } from 'react-router-dom'
-import Create from './Pages/Create'
-import AllUser from './Pages/AllUser'
-import Update from './Pages/Update'
+import Auth from './pages/Auth'
+import Register from './components/auth/Register'
+import Login from './components/auth/login'
 
 const App = () => {
   return (
-  <>
-    <Navbar />
-    <Routes>
-      <Route path='/' element={<Create />}/>
-      <Route path='/all-user' element={<AllUser />}/>
-      <Route path='/update' element={<Update />}/>
-    </Routes>
-  </>
+    <>
+        <Routes>
+          <Route path='/auth' element={ <Auth /> }>
+            <Route path='register' element={<Register/>}/>
+            <Route path='login' element={<Login/>}/>
+          </Route>
+        </Routes>
+    </>
   )
 }
 
